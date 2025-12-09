@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "Services", href: "#services" },
-  { name: "Reviews", href: "#reviews" },
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Services", href: "/services" },
+  { name: "Reviews", href: "/reviews" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
@@ -19,24 +20,24 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <img src={logo} alt="Photo Gallery Logo" className="h-14 w-14 object-contain rounded-lg" />
             <div className="hidden sm:block">
               <h1 className="font-display text-xl font-semibold text-gradient-gold">Photo Gallery</h1>
               <p className="text-xs text-muted-foreground tracking-wider">KUNDAPURA</p>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 tracking-wide"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -65,14 +66,14 @@ const Navbar = () => {
           <div className="lg:hidden pb-6 animate-fade-up">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setIsOpen(false)}
                   className="text-foreground/80 hover:text-primary transition-colors py-2 border-b border-border/50"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
               <a
                 href="tel:07259934433"
