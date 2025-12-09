@@ -7,7 +7,6 @@ import Reviews from "@/components/Reviews";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import FloatingButtons from "@/components/FloatingButtons";
 
 const Index = () => {
   return (
@@ -61,7 +60,6 @@ const Index = () => {
         <About />
         <Contact />
         <Footer />
-        <FloatingButtons />
       </main>
     </>
   );

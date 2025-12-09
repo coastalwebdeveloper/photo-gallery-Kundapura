@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import FloatingButtons from "@/components/FloatingButtons";
 
 const ContactPage = () => {
   return (
@@ -15,7 +14,6 @@ const ContactPage = () => {
         <Navbar />
         <Contact />
         <Footer />
-        <FloatingButtons />
       </main>
     </>
   );

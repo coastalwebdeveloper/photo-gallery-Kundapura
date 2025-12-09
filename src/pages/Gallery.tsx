@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import GalleryCollage from "@/components/GalleryCollage";
 import Footer from "@/components/Footer";
-import FloatingButtons from "@/components/FloatingButtons";
 
 const Gallery = () => {
   return (
@@ -15,7 +14,6 @@ const Gallery = () => {
         <Navbar />
         <GalleryCollage />
         <Footer />
-        <FloatingButtons />
       </main>
     </>
   );

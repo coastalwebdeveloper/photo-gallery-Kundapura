@@ -22,9 +22,9 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <img src={logo} alt="Photo Gallery Logo" className="h-14 w-14 object-contain rounded-lg" />
-            <div className="hidden sm:block">
+            <div>
               <h1 className="font-display text-xl font-semibold text-gradient-gold">Photo Gallery</h1>
-              <p className="text-xs text-muted-foreground tracking-wider">KUNDAPURA</p>
+              <p className="text-xs text-muted-foreground tracking-wider">Kundapura</p>
             </div>
           </Link>
 
